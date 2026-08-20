@@ -130,5 +130,8 @@ type Probe struct {
 }
 
 func (p *Probe) PeerName() string {
+	if p == nil {
+		return ""
+	}
 	return p.Peer
 }
